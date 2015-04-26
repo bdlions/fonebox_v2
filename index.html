@@ -627,24 +627,24 @@
                                     <div class="span4">
                                         <div class="input-group">
                                             <div class="controls">
-                                                <label for="company">Company Name <span class="text_color_red">(required)</label>
-                                                <input type="text" placeholder="Company Name" name="company" id="company">
+                                                <label for="company_name">Company Name <span class="text_color_red">(required)</label>
+                                                <input type="text" placeholder="Company Name" name="company_name" id="company_name">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="span4">
                                         <div class="input-group">
                                             <div class="controls">
-                                                <label for="fname">First Name <span class="text_color_red">(required)</span></label>
-                                                <input type="text" placeholder="First Name" name="fname" id="fname" required>
+                                                <label for="first_name">First Name <span class="text_color_red">(required)</span></label>
+                                                <input type="text" placeholder="First Name" name="first_name" id="first_name">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="span4">
                                         <div class="input-group">
                                             <div class="controls">
-                                                <label for="lname">Last Name <span class="text_color_red">(required)</span></label>
-                                                <input type="text" placeholder="Last Name" name="lname" id="lname" required>
+                                                <label for="last_name">Last Name <span class="text_color_red">(required)</span></label>
+                                                <input type="text" placeholder="Last Name" name="last_name" id="last_name">
                                             </div>
                                         </div>
                                     </div>
@@ -664,7 +664,7 @@
                                                 <label for="phone">Phone <span class="text_color_red"> (required)</span></label>
                                                 <div class="row-fluid">
                                                     <div class="span3">
-                                                        <input id="country_code" type="text" placeholder="+1" style="width:50px;text-align:center;" name="country_code">
+                                                        <input type="text" placeholder="+1" style="width:50px;text-align:center;" name="country_code" id="country_code">
                                                     </div>
                                                     <div class="span9">
                                                         <input type="text" placeholder="Phone" name="phone" id="phone">
@@ -676,7 +676,7 @@
                                     <div class="span4">
                                         <div class="input-group">
                                             <div class="controls">
-                                                <label for="website">Website <span class="text_color_red"></span></label>
+                                                <label for="website">Website <span class="text_color_red"> (required)</span></label>
                                                 <input type="text" placeholder="Website" name="website" id="website">
                                             </div>
                                         </div>
@@ -694,7 +694,7 @@
                                                 <label for="company_type">Company Type <span class="text_color_red"> (required)</span></label>
                                             </div>
                                         </div>
-                                        <ul class="li_dot_remote">
+                                        <ul class="li_dot_remote" id="company_type_list">
                                             <li>
                                                 <input id="company_type1" type="checkbox" value="1" name="company_type[]">
                                                 Termination Provider
@@ -743,7 +743,7 @@
                                         <div class="input-group">
                                             <div class="controls">
                                                 <label for="message">Brief Description <span class="text_color_red">(required)</span></label>
-                                                <textarea style="width: 98%; height: 80px;" name="message" placeholder="Tell us about your company,clearArea(this, 'Tell us about your company, your core markets, and how we may help you." id="message" required></textarea>
+                                                <textarea style="width: 98%; height: 80px;" name="message" placeholder="Tell us about your company,clearArea(this, 'Tell us about your company, your core markets, and how we may help you." id="message"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -1113,28 +1113,60 @@
 
         <script language="javascript">
             function contactform() {
-                if (document.contact_form.fname.value == '') {
-                    alert("First name is Mandatory.");
-                    document.contact_form.fname.focus();
+                if($("#company_name").val() == "")
+                {
+                    $("#company_name").focus();        
+                    alert("Company name is required.");
                     return false;
                 }
-
-                else if (document.contact_form.lname.value == '') {
-                    alert("Last name is Mandatory.");
-                    document.contact_form.lname.focus();
-
+                if($("#first_name").val() == "")
+                {
+                    $("#first_name").focus();        
+                    alert("First name is required.");
                     return false;
                 }
-                else if (document.contact_form.email.value == '') {
-                    alert("Email is Mandatory.");
-                    document.contact_form.email.focus();
-                    return false;
-                } else if (document.contact_form.message.value == '') {
-                    alert("Message is Mandatory.");
-                    document.contact_form.message.focus();
-
+                if($("#last_name").val() == "")
+                {
+                    $("#last_name").focus();        
+                    alert("Last name is required.");
                     return false;
                 }
+                if($("#country").val() == "")
+                {
+                    $("#country").focus();        
+                    alert("Country is required.");
+                    return false;
+                }
+                if($("#country_code").val() == "")
+                {
+                    $("#country_code").focus();        
+                    alert("Phone code is required.");
+                    return false;
+                }
+                if($("#phone").val() == "")
+                {
+                    $("#phone").focus();        
+                    alert("Phone is required.");
+                    return false;
+                }
+                if($("#website").val() == "")
+                {
+                    $("#website").focus();        
+                    alert("Website is required.");
+                    return false;
+                }
+                if($("#message").val() == "")
+                {
+                    $("#message").focus();        
+                    alert("Message is required.");
+                    return false;
+                }
+                if($('#company_type_list checkbox:checked').length > 0)
+                {
+                    alert("Compnay type selection is required.");
+                    return false;
+                }
+                return false;
             }
 
         </script>
