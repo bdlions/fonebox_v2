@@ -879,3 +879,12 @@ background-color: #77C14D;
 color: #fff;
 }*/
 
+
+.table_label_style{
+    margin-bottom: 0px;
+}
+
+.modal.fade.in {
+    top: 15%;
+}
+
