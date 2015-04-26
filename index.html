@@ -1100,14 +1100,12 @@
 
             $(function () {
                 $(".switch").on('click', function () {
-                    if ($(this).find("i").hasClass('fa-arrow-right')) {
-                        $(this).find("i").removeClass('fa-arrow-right').addClass('fa-arrow-down');
-                        //$(this).find(".point_body").removeClass('hide');
-                        $(this).find("#div_product_details").show(1000);
-                    } else {
-                        $(this).find("i").removeClass('fa-arrow-down').addClass('fa-arrow-right');
-                        //$(this).find(".point_body").addClass('hide');
+                    if ($(this).find("i").hasClass('identifier-show-description')) {
                         $(this).find("#div_product_details").hide(1000);
+                        $(this).find("i").removeClass('identifier-show-description')
+                    } else {
+                        $(this).find("i").addClass('identifier-show-description');
+                        $(this).find("#div_product_details").show(1000);
                     }
                 });
             });
