@@ -672,19 +672,19 @@
                                         </div>
                                         <ul class="li_dot_remote" id="company_type_list">
                                             <li>
-                                                <input id="company_type1" type="checkbox" value="1" name="company_type[]">
+                                                <input id="company_type1" type="checkbox" value="0" name="company_type[]">
                                                 Termination Provider
                                             </li>
                                             <li>
-                                                <input id="company_type2" type="checkbox" value="2" name="company_type[]">
+                                                <input id="company_type2" type="checkbox" value="1" name="company_type[]">
                                                 Wholesaler / Reseller
                                             </li>
                                             <li>
-                                                <input id="company_type3" type="checkbox" value="3" name="company_type[]">
+                                                <input id="company_type3" type="checkbox" value="2" name="company_type[]">
                                                 Retailer
                                             </li>
                                             <li>
-                                                <input id="company_type4" type="checkbox" value="4" name="company_type[]">
+                                                <input id="company_type4" type="checkbox" value="3" name="company_type[]">
                                                 Other
                                             </li>
                                         </ul>
@@ -695,22 +695,21 @@
                                                 <label for="daily_revenue">Daily Revenue <span class="text_color_red"> (required)</span></label>
                                             </div>
                                         </div>
-                                        <ul class="li_dot_remote">
+                                        <ul class="li_dot_remote" id="daily_revenue_list">
                                             <li>
-                                                <input id="daily_revenue1" type="radio" value="1" name="daily_revenue">
-
+                                                <input id="daily_revenue1" type="radio" value="0" name="daily_revenue[]">
                                                 Under $1,000
                                             </li>
                                             <li>
-                                                <input id="daily_revenue2" type="radio" value="2" name="daily_revenue">
+                                                <input id="daily_revenue2" type="radio" value="1" name="daily_revenue[]">
                                                 $1,000 - $10,000
                                             </li>
                                             <li>
-                                                <input id="daily_revenue3" type="radio" value="3" name="daily_revenue">
+                                                <input id="daily_revenue3" type="radio" value="2" name="daily_revenue[]">
                                                 $10,000 - $50,000
                                             </li>
                                             <li>
-                                                <input id="daily_revenue4" type="radio" value="4" name="daily_revenue">
+                                                <input id="daily_revenue4" type="radio" value="3" name="daily_revenue[]">
                                                 $50,000 +
                                             </li>
                                         </ul>
@@ -728,8 +727,8 @@
                                                 <label for="im">IM <span class="text_color_red"> (required)</span></label>
                                                 <div class="row-fluid">
                                                     <div class="span5">
-                                                        <select class="form-control" name="control">
-                                                            <option selected="1" value="0" >AIM</option>
+                                                        <select class="form-control" id="im_selection" name="im_selection">
+                                                            <option selected="selected" value="0">AIM</option>
                                                             <option value="1">Gtalk</option>
                                                             <option value="2">MSN</option>
                                                             <option value="3">Skype</option>
@@ -1112,12 +1111,6 @@
 
         <script language="javascript">
             function contactform() {
-                if ($("#company_name").val() == "")
-                {
-                    $("#company_name").focus();
-                    alert("Company name is required.");
-                    return false;
-                }
                 if ($("#first_name").val() == "")
                 {
                     $("#first_name").focus();
@@ -1128,6 +1121,12 @@
                 {
                     $("#last_name").focus();
                     alert("Last name is required.");
+                    return false;
+                }
+                if ($("#email").val() == "")
+                {
+                    $("#email").focus();
+                    alert("Email is required.");
                     return false;
                 }
                 if ($("#country").val() == "")
@@ -1154,18 +1153,48 @@
                     alert("Website is required.");
                     return false;
                 }
+                if ($("#company_name").val() == "")
+                {
+                    $("#company_name").focus();
+                    alert("Company name is required.");
+                    return false;
+                }
+                var company_type_selected = false;
+                $('#company_type_list input[type="checkbox"]').each(function() {
+                    if ($(this).is(":checked")) {
+                        company_type_selected = true;
+                    }
+                });
+                if (!company_type_selected)
+                {
+                    alert("Compnay type selection is required.");
+                    return false;
+                }
+                var daily_revenue_selected = false;
+                $('#daily_revenue_list input[type="radio"]').each(function() {
+                    if ($(this).is(":checked")) {
+                        daily_revenue_selected = true;
+                    }
+                });
+                alert(daily_revenue_selected);
+                if (!daily_revenue_selected)
+                {
+                    alert("Daily revenue selection is required.");
+                    return false;
+                }
+                if ($("#im").val() == "")
+                {
+                    $("#im").focus();
+                    alert("IM is required.");
+                    return false;
+                }
                 if ($("#message").val() == "")
                 {
                     $("#message").focus();
                     alert("Message is required.");
                     return false;
-                }
-                if ($('#company_type_list checkbox:checked').length > 0)
-                {
-                    alert("Compnay type selection is required.");
-                    return false;
-                }
-                return false;
+                }            
+                return true;
             }
         </script>
         
