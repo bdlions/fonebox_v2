@@ -8,41 +8,6 @@
         <meta name="author" content="" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <script src="assets/js/jquery.js" type="text/javascript"></script> 
-        <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-transition.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-alert.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-modal.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-dropdown.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-scrollspy.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-tab.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-tooltip.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-popover.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-button.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-collapse.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-carousel.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-typeahead.js" type="text/javascript"></script> 
-        <script src="assets/js/bootstrap-affix.js" type="text/javascript"></script> 
-
-        <script src="assets/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-        <script src="assets/js/tweetable.jquery.js" type="text/javascript"></script>
-        <script src="assets/js/jquery.timeago.js" type="text/javascript"></script>
-
-        <script src="assets/js/jquery.fitvids.min.js" type="text/javascript"></script>
-
-        <!-- PARALLAX PLUGIN -->
-        <script type="text/javascript" src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.inview.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.scrollTo-1.4.2-min.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.parallax-1.1.3.js"></script>
-        <!-- PARALLAX PLUGIN -->
-
-        <!-- gMap PLUGIN -->
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        <script type="text/javascript" src="assets/js/jquery.gmap.js"></script>
-        <!-- gMap PLUGIN -->
-        <script src="assets/js/custom.js" type="text/javascript"></script>
-
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" />
         <link href="assets/css/pricing.css" rel="stylesheet" />
@@ -59,44 +24,42 @@
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
 
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".scroller-spy" data-twttr-rendered="true">
 
         <div class="main-wrapper">
 
             <!-- TOP SECTION-->
-            <div class="row-fluid" style="background-color: white; position: fixed; z-index: 9999;">
-                <nav class="nav-top">
-                    <div class="navbar navbar-static-top" id="topnavbar"> 
-                        <!--navbar-fixed-top--> 
-                        <div class="navbar-inner" id="navbartop">
-                            <div class="container"> 
-                                <div class="row">
-                                    <div class="span4">
 
-                                        <a class="brand" href="index.html"> 
-                                            <img src="assets/img/logo.png" alt="Logo"></a>
-                                    </div>
-                                    <div class="span8" style="padding-top: 8px;">
-                                        <div id="main-nav" class="scroller-spy">
-                                            <nav class="nav-collapse">
-                                                <ul  class="nav" id="nav">
-                                                    <li><a href="#header-section">Home</a> </li>
-                                                    <li><a href="#features-section">Welcome</a> </li>
-                                                    <li><a href="#slogan-section-1">News & Affairs</a> </li>
-                                                    <li><a href="#portfolio-section">Products & Rates</a> </li>
-                                                    <li><a href="#map-section">Map</a> </li>
-                                                    <li><a href="#contact-form">Contact</a> </li>
-                                                </ul> 
-                                            </nav>
-                                        </div>
+            <section class="headertop" id="header-section">
+                <div class="row-fluid" style="background-color: white; position: fixed; z-index: 9999;">
+                    <nav class="nav-top">
+                        <div class="navbar navbar-static-top" id="topnavbar">              
+                            <div class="navbar-inner" id="navbartop">
+                                <div class="container"> <a class="brand" href="index.html"> 
+                                        <img src="assets/img/logo.png" alt="Logo"></a>
+                                    <div id="main-nav" class="scroller-spy">
+                                        <nav class="nav-collapse collapse">
+                                            <ul class="nav" id="nav">
+                                                <li class="active"><a href="#header-section">Home</a> </li>
+                                                <li><a href="#features-section">Welcome</a> </li>
+                                                <li><a href="#slogan-section-1">News & Affairs</a> </li>
+                                                <li><a href="#portfolio-section">Products & Rates</a> </li>
+                                                <li><a href="#map-section">Map</a> </li>
+                                                <li><a href="#contact-form">Contact</a> </li>
+                                            </ul>
+                                        </nav>
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
-            <section class="headertop" id="header-section">
+                    </nav>
+                </div>
+
+
+
+
                 <header class="container">
                     <div class="row-fluid">
                         <div class="wrap-hero">
@@ -874,188 +837,43 @@
             </footer>
         </div>
 
-        <!--================================================== Modal ======================================-->
+        
 
-        <div style="display: none;" class="modal fade" id="modal_current_affair_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">ITW 2015 on 10-13th May</h4></div>
-                    </div>
-                    <div class="modal-body"style="text-align: justify;">
-                        FoneBox USA Pte. Ltd. would like to invite you to an organizational meeting held at the International Telecoms 
-                        Week (ITW) from May 10-13, 2015 at the Hyatt Regency and Swissotel in Chicago, USA. <br><br>
+        <!================================================== Java Script ======================================-->
+        <script src="assets/js/jquery.js" type="text/javascript"></script> 
+        <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-transition.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-alert.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-modal.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-dropdown.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-scrollspy.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-tab.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-tooltip.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-popover.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-button.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-collapse.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-carousel.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-typeahead.js" type="text/javascript"></script> 
+        <script src="assets/js/bootstrap-affix.js" type="text/javascript"></script> 
 
-                        FoneBox is a prominent telecommunications company with roots in the ever blossoming telecom sector of Singapore.
-                        We aim to deliver our customers with an array of reasonable, convenient and user-friendly wireless services intending
-                        to simplify and enhance the lives of people. We are equally an entity possessing satisfactory skills in the field of call aggregation.<br><br>
+        <script src="assets/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+        <script src="assets/js/tweetable.jquery.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.timeago.js" type="text/javascript"></script>
 
-                        It would be an honor for FoneBox to be able to do business with an esteemed company such as you. At the mentioned venues, 
-                        we will have arranged for an exhibition booth, a bilateral table and a meeting room to help facilitate any meets that might 
-                        be held between us. We are hoping that we will get the same support from you as we continue to receive it from others. <br><br>
+        <script src="assets/js/jquery.fitvids.min.js" type="text/javascript"></script>
 
-                        Your esteemed presence is what we look forward to. We hope to enjoy more fruitful business deals and a great association with
-                        you in the days ahead. If you have any questions regarding this meeting, you can reach us easily at +65 6702 4466<br><br>
+        <!-- PARALLAX PLUGIN -->
+        <script type="text/javascript" src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.inview.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.scrollTo-1.4.2-min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.parallax-1.1.3.js"></script>
+        <!-- PARALLAX PLUGIN -->
 
-                        Thank you for your time, and we hope to see you at the meeting.<br><br>
-                        Cordially,<br>
-                        <span style="font-weight: bold;">FoneBox Team</span>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div style="display: none;" class="modal fade" id="modal_current_affair_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Capacity Conference on 10-11th June 2015</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        FoneBox USA would like to invite you meeting us at the annual meeting point for global wholesale telecommunications community, 
-                        the <span style=" font-weight: bold;">Capacity Conference Central & Eastern Europe 2015</span> on 10-11th June 2015 in Warsaw.
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div style="display: none;" class="modal fade" id="modal_current_affair_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Capacity Conference on 8-9th September 2015</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        FoneBox USA would like to invite you meeting us at the annual meeting point for global wholesale telecommunications community, 
-                        the <span style=" font-weight: bold;">Capacity Conference Africa 2015</span> on 8-9th September 2015 in Tanzania.             </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: none;" class="modal fade" id="modal_mission_007" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Mission</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        Our mission is to provide our clients with supreme acquaintance with commendable VoIP telephony services. 
-                        To achieve that purpose we have gathered direct terminations and formed an excellent team to provide 24x7 
-                        outstanding service to our customers. 
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: none;" class="modal fade" id="modal_vision_007" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Vision</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        Our vision is to be a leader as a facilitator to enable our clients to receive the highest standards of our services and 
-                        to provide the highest quality business process outsourcing solutions at a competitive rate with dedication to build strong
-                        partnerships and a solid commitment to our clients worldwide.
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: none;" class="modal fade" id="modal_ceo_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">CEO’s Message</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        CEO’s Message: Welcome
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: none;" class="modal fade" id="modal_road_map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Road Map</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        Road Map of the company.
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: none;" class="modal fade" id="modal_management_team" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Management Team</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        Management Team of the company.
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: none;" class="modal fade" id="modal_regional_offices" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Regional Offices</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        Regional Offices...
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="display: none;" class="modal fade" id="modal_about_foneBox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal_background_color">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">About FoneBox</h4></div>
-                    </div>
-                    <div class="modal-body" style="text-align: justify;">
-                        Fonebox enhances the lives of its customers by providing convenient and user-friendly VoIP telecom services. As one of the 
-                        greatest VoIP providers, Fonebox has been delivering incredible Service to their consumer since it’s born. We acquire enormous
-                        pride in providing the highest quality phone systems and route for consumers. We offer VoIP direct Termination services and 
-                        proficiency to the users to make reasonable international calls at very low cost. As our organization is precisely aware about
-                        our quality so, to maintain the excellence our IT team constantly observes the QoS provided to our clients. We invite you to be
-                        a part of our FoneBox fraternity. Be associated with FoneBox, the efficient approach to human communication.
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--================================================== Java Script ======================================-->
+        <!-- gMap PLUGIN -->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="assets/js/jquery.gmap.js"></script>
+        <!-- gMap PLUGIN -->
+        <script src="assets/js/custom.js" type="text/javascript"></script>
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 jQuery('#nav').localScroll(1000);
@@ -1068,12 +886,12 @@
                 //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
                 //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
                 jQuery('#header-section').parallax("50%", 0.1);
-                jQuery('#features-section').parallax("50%", 0.1);
-                jQuery('#team-section').parallax("50%", 0.1);
+                //jQuery('#features-section').parallax("50%", 0.1);
+                //jQuery('#team-section').parallax("50%", 0.1);
                 jQuery('.bg').parallax("50%", 0.3);
                 jQuery('#portfolio-section').parallax("50%", 0.3);
-                jQuery('#price-section').parallax("50%", 0.3);
-                jQuery('#contact-section').parallax("50%", 0.1);
+                //jQuery('#price-section').parallax("50%", 0.3);
+                //jQuery('#contact-section').parallax("50%", 0.1);
                 jQuery('#slogan-section-1').parallax("50%", 0.3);
 
             })
@@ -1349,6 +1167,187 @@
                 }
                 return false;
             }
-</script>
-</body>
+        </script>
+        
+        <!--================================================== Modal ======================================-->
+
+        <div style="display: none;" class="modal fade" id="modal_current_affair_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">ITW 2015 on 10-13th May</h4></div>
+                    </div>
+                    <div class="modal-body"style="text-align: justify;">
+                        FoneBox USA Pte. Ltd. would like to invite you to an organizational meeting held at the International Telecoms 
+                        Week (ITW) from May 10-13, 2015 at the Hyatt Regency and Swissotel in Chicago, USA. <br><br>
+
+                        FoneBox is a prominent telecommunications company with roots in the ever blossoming telecom sector of Singapore.
+                        We aim to deliver our customers with an array of reasonable, convenient and user-friendly wireless services intending
+                        to simplify and enhance the lives of people. We are equally an entity possessing satisfactory skills in the field of call aggregation.<br><br>
+
+                        It would be an honor for FoneBox to be able to do business with an esteemed company such as you. At the mentioned venues, 
+                        we will have arranged for an exhibition booth, a bilateral table and a meeting room to help facilitate any meets that might 
+                        be held between us. We are hoping that we will get the same support from you as we continue to receive it from others. <br><br>
+
+                        Your esteemed presence is what we look forward to. We hope to enjoy more fruitful business deals and a great association with
+                        you in the days ahead. If you have any questions regarding this meeting, you can reach us easily at +65 6702 4466<br><br>
+
+                        Thank you for your time, and we hope to see you at the meeting.<br><br>
+                        Cordially,<br>
+                        <span style="font-weight: bold;">FoneBox Team</span>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none;" class="modal fade" id="modal_current_affair_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Capacity Conference on 10-11th June 2015</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        FoneBox USA would like to invite you meeting us at the annual meeting point for global wholesale telecommunications community, 
+                        the <span style=" font-weight: bold;">Capacity Conference Central & Eastern Europe 2015</span> on 10-11th June 2015 in Warsaw.
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none;" class="modal fade" id="modal_current_affair_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Capacity Conference on 8-9th September 2015</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        FoneBox USA would like to invite you meeting us at the annual meeting point for global wholesale telecommunications community, 
+                        the <span style=" font-weight: bold;">Capacity Conference Africa 2015</span> on 8-9th September 2015 in Tanzania.             </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" class="modal fade" id="modal_mission_007" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Mission</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Our mission is to provide our clients with supreme acquaintance with commendable VoIP telephony services. 
+                        To achieve that purpose we have gathered direct terminations and formed an excellent team to provide 24x7 
+                        outstanding service to our customers. 
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" class="modal fade" id="modal_vision_007" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Vision</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Our vision is to be a leader as a facilitator to enable our clients to receive the highest standards of our services and 
+                        to provide the highest quality business process outsourcing solutions at a competitive rate with dedication to build strong
+                        partnerships and a solid commitment to our clients worldwide.
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" class="modal fade" id="modal_ceo_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">CEO’s Message</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Under Development...
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" class="modal fade" id="modal_road_map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Road Map</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Under Development...
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" class="modal fade" id="modal_management_team" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Management Team</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Under Development...
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" class="modal fade" id="modal_regional_offices" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">Regional Offices</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Under Development...
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" class="modal fade" id="modal_about_foneBox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_background_color">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div style="text-align: center;"><h4 class="modal-title" id="myModalLabel">About FoneBox</h4></div>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Fonebox enhances the lives of its customers by providing convenient and user-friendly VoIP telecom services. As one of the 
+                        greatest VoIP providers, Fonebox has been delivering incredible Service to their consumer since it’s born. We acquire enormous
+                        pride in providing the highest quality phone systems and route for consumers. We offer VoIP direct Termination services and 
+                        proficiency to the users to make reasonable international calls at very low cost. As our organization is precisely aware about
+                        our quality so, to maintain the excellence our IT team constantly observes the QoS provided to our clients. We invite you to be
+                        a part of our FoneBox fraternity. Be associated with FoneBox, the efficient approach to human communication.
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
