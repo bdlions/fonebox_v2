@@ -835,7 +835,6 @@ float: left;
     -o-transition: 0.4s;
     transition: 0.4s;
     color: #ea6645;
-    content: "\f18e";
     display: inline-block;
     font-size: 16px;
     margin-left: 5px;
@@ -886,5 +885,14 @@ color: #fff;
 
 .modal.fade.in {
     top: 15%;
+}
+
+select {  
+    width: 70px;
+}
+
+.btn-color-primary{
+    color: #00B0EF;
+    font-weight: bold;
 }
 

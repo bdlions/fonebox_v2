@@ -54,16 +54,15 @@
     
     $emailMessage = $emailMessage.$desc;
     
-    print_r($emailMessage);
-    return;
+  
 
-    $emailTo = 'ask@fonebox.com.sg';
+    $emailTo = 'noc@fonebox.com.sg';
 
     $headers = "MIME-Version: 1.0" . "\r\n";
 
     $headers .= "Content-type:text/html; charset=iso-8859-1" . "\r\n";
 
-    $headers .= "From: ".$fname.' '.$lname." <.".$email.">" . "\r\n";
+    $headers .= "From: ".$fname.' '.$lname." <".$email.">" . "\r\n";
 
 
 
@@ -77,7 +76,7 @@ if(mail($emailTo,$emailSubject,$emailMessage,$headers)){
 
             alert('Mail successfully sent.');
 
-            location.href='contact_us.php';
+            location.href='index.html';
 
         </script>";
 
@@ -89,7 +88,7 @@ if(mail($emailTo,$emailSubject,$emailMessage,$headers)){
 
             alert('Unable to send email. Please try again.');
 
-            location.href='contact_us.php';
+            location.href='index.html';
 
         </script>";
 
