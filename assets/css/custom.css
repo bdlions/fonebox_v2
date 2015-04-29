@@ -121,13 +121,13 @@ Template: parallax
 }
 
 .default-icons a{
-    background: linear-gradient(to bottom, #fff 0%, #fff 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)!important;
+    background: linear-gradient(top bottom, #fff 0%, #fff 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)!important;
 }
 .default-icons a:hover {
     background: lightgray!important;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 480px){
     .carousel-control{
         margin-top: 0!important;
         height: 20px!important;
@@ -136,13 +136,66 @@ Template: parallax
         line-height: 15px!important;
     }
     .welcome_note_h1_style{
-        font-size: 22px;
+        font-size: 18px;
     }
     .welcome_note_para_style{
-    font-size: 15px;
+    font-size: 12px;
+    padding: 8px 8px;
+}
+.carousel-control.right {
+    background-image: url("../img/large_right_small.png");
+    right: -47px;
+    left: auto;
+    transition: all 0.2s ease 0s;
+}
+.carousel-control.left {
+    background-image: url("../img/large_left_small.png");
+    left: -47px;
+    right: auto;
+    transition: all 0.2s ease 0s;
+}
+.margin_left_style{
+    margin-left: -255px;
+
+}
+}
+@media (min-width: 481px) and (max-width: 767px){
+.carousel-control.right {
+    background-image: url("../img/large_right_small.png");
+    right: -47px;
+    left: auto;
+    transition: all 0.2s ease 0s;
+}
+.carousel-control.left {
+    background-image: url("../img/large_left_small.png");
+    left: -47px;
+    right: auto;
+    transition: all 0.2s ease 0s;
+}
+.carousel-control{
+        margin-top: 0!important;
+        height: 20px!important;
+        width: 20px!important;
+        font-size: 30px!important;
+        line-height: 15px!important;
+    }
+  .welcome_note_h1_style{
+        font-size: 20px;
+    }
+    .welcome_note_para_style{
+    font-size: 13px;
     padding: 10px 10px;
 }
+.margin_left_style{
+    margin-left: -275px;
+
 }
+.margin_left_style{
+    margin-left: -265px;
+
+}
+}
+
 @media (min-width: 768px) and (max-width: 991px){
     .carousel-control{
         margin-top: 0!important;
@@ -152,16 +205,32 @@ Template: parallax
         line-height: 20px!important;
     }
     .welcome_note_h1_style{
-        font-size: 33px;
+        font-size: 22px;
     }
     .welcome_note_para_style{
-    font-size: 17px;
-    padding: 10px 0;
+    font-size: 15px;
+    padding: 10px 10px;
+}
+.carousel-control.right {
+    background-image: url("../img/large_right_medium.png");
+    right: -47px;
+    left: auto;
+    transition: all 0.2s ease 0s;
+}
+.carousel-control.left {
+    background-image: url("../img/large_left_medium.png");
+    left: -47px;
+    right: auto;
+    transition: all 0.2s ease 0s;
+}
+.margin_left_style{
+    margin-left: -275px;
+
 }
     
 }
 
-@media screen and (min-width: 992px){
+@media (min-width: 992px){
     .carousel-control{
         margin-top: 0!important;
     }
@@ -169,11 +238,47 @@ Template: parallax
     font-size: 44px;
 }
 .welcome_note_para_style{
-    font-size: 19px;
+    font-size: 15px;
     padding: 10px 0;
     padding-top: 30px;
 }
+.carousel-control.right {
+    background-image: url("../img/large_right.png");
+    right: -47px;
+    left: auto;
+    transition: all 0.2s ease 0s;
 }
+.carousel-control.left {
+    background-image: url("../img/large_left.png");
+    left: -47px;
+    right: auto;
+    transition: all 0.2s ease 0s;
+}
+.margin_left_style{
+    margin-left: -275px;
+
+}
+
+
+}
+
+    .padding_right_75px_style{
+    padding-right: 75px;
+}
+.padding_right_180px_style{
+    padding-right: 180px;
+}
+.padding_right_12px_style{
+    padding-left: 12px;
+}
+.padding_right_140px_style{
+   padding-right: 140px;
+}
+.padding_right_140px_style{
+   padding-right: 140px;
+}
+
+
 
 div#features-section div.container div.container-fluid,
 div#features-section div.container
@@ -203,9 +308,9 @@ div#portfolio-section div.container
     color: black;
     text-align: center;
 }
-.welcome_note_para_style{
+@media screen{
+    .welcome_note_para_style{
     font-family: raleway_regular;
-    font-size: 19px;
     color: black;
     text-align: justify;
 }
@@ -220,6 +325,9 @@ div#portfolio-section div.container
     border-radius: 3px;
     width: 40px;
 }
+}
+
+
 
 #features-section {
 min-height: 0px!important;  
@@ -884,7 +992,7 @@ color: #fff;
 }
 
 .modal.fade.in {
-    top: 15%;
+    top: 20%;
 }
 
 select {  
@@ -894,5 +1002,19 @@ select {
 .btn-color-primary{
     color: #00B0EF;
     font-weight: bold;
+}
+
+.modal.fade {
+    top: 0px;
+}
+
+.modal_style{   
+    display: none; 
+    z-index: 1100
+}
+
+#main-nav select {
+    width: 150px;
+    margin-left: 20px;
 }
 

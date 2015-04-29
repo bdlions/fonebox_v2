@@ -35,7 +35,7 @@ jQuery(function (jQuery) {
                 perfix = '-';
                 break;
             case (13):
-                perfix = '--';
+                perfix = '-- ';
                 break;
             default:
                 perfix = '';
