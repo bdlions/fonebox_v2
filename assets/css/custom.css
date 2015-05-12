@@ -262,7 +262,7 @@ Template: parallax
 
 }
 
-    .padding_right_75px_style{
+.padding_right_75px_style{
     padding-right: 75px;
 }
 .padding_right_180px_style{
@@ -272,10 +272,16 @@ Template: parallax
     padding-left: 12px;
 }
 .padding_right_140px_style{
-   padding-right: 140px;
+    padding-right: 140px;
 }
 .padding_right_140px_style{
-   padding-right: 140px;
+    padding-right: 140px;
+}
+.padding_right_120px_style{
+    padding-right: 120px;
+}
+.padding_right_160px_style{
+    padding-right: 160px;
 }
 
 
@@ -1010,7 +1016,7 @@ select {
 
 .modal_style{   
     display: none; 
-    z-index: 1100
+    z-index: 10000;
 }
 
 #main-nav select {
